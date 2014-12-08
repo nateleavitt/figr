@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nathan Leavitt"]
   spec.email         = ["nateleavitt@gmail.com"]
   spec.summary       = %q{Figr service cli}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  # spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = "https://github.com/nateleavitt"
   spec.license       = "MIT"
 
