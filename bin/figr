@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'figr'
+
+chatter = Figr::Chatter.new
+chatter.say_hello
