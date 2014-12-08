@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Figr::VERSION
   spec.authors       = ["Nathan Leavitt"]
   spec.email         = ["nateleavitt@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = %q{Figr service cli}
   spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nateleavitt"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
