@@ -1,28 +1,28 @@
 #!/usr/bin/env ruby
 
 require 'figr'
-
-
 require 'optparse'
 
-chatter = Figr::APIChatter.new
-OptionParser.new do |opts|
+Figr::CLI.run(ARGV)
 
-  opts.on('-h', 'Shows this help screen') do
-    puts opts
-    exit
-  end
+# puts "#{ARGV}"
+# OptionParser.new do |opts|
 
-  opts.on('login', '--login LOGIN', 'Login to Figr service') do
-    chatter.login
-  end
+#   opts.on('-h', 'Shows this help screen') do
+#     puts opts
+#     exit
+#   end
 
-  opts.on('-s', '--set SET', 'Set a config value for a specified key') do |val|
-    chatter.set_val(val)
-  end
+#   # opts.on('login', '--login LOGIN', 'Login to Figr service') do
+#   #   chatter.login
+#   # end
 
-  opts.on('-g', '--get GET', 'Get a value for a specified key') do |val|
-    chatter.get_val(val)
-  end
+#   opts.on('-s', '--set SET', 'Set a config value for a specified key') do |val|
+#     chatter.set_val(val)
+#   end
 
-end.parse!
+#   opts.on('-g', '--get GET', 'Get a value for a specified key') do |val|
+#     chatter.get_val(val)
+#   end
+
+# end.parse!

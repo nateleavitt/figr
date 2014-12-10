@@ -2,9 +2,16 @@ require "figr/version"
 
 module Figr
 
-  class APIChatter
-    def initialize
+  module CLI
 
+
+    extend self
+
+    def run(*args)
+      command = args.shift.strip rescue "help"
+      FIGR::Command.load
+      FIGR::Command.run(command, args)
+      puts "Here is the command: #{command} and opts: #{args.inspect}"
     end
 
     def login
@@ -30,6 +37,17 @@ module Figr
     def get_val(val)
       puts "Here is your value: #{val}"
     end
+
+    private
+    # can't use flatten as it will flatten hashes
+      def preparse(unparsed, args = [], opts = {})
+        case unparsed
+        when Hash  then opts.merge! unparsed
+        when Array then unparsed.each { |e| preparse(e, args, opts) }
+        else args << unparsed.to_s
+        end
+        [args, opts]
+      end
 
   end
 
