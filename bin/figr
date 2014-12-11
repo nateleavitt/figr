@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'figr'
+require 'figr/cli'
 require 'optparse'
 
-Figr::CLI.run(ARGV)
+FIGR::CLI.run(ARGV)
 
 # puts "#{ARGV}"
 # OptionParser.new do |opts|

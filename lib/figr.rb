@@ -1,6 +1,6 @@
 require "figr/version"
 
-module Figr
+module FIGR
 
     def login
       puts "We need your GitHub login to identify you. \n

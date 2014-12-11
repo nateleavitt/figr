@@ -1,4 +1,7 @@
-class Figr::CLI
+require "figr"
+require "figr/command"
+
+class FIGR::CLI
 
   def self.run(*args)
     command = args.shift.strip rescue "help"
